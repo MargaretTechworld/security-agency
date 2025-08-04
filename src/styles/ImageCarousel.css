@@ -1,0 +1,260 @@
+/* Image Carousel Styles */
+.carousel-container {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  /* Ensure proper image containment */
+  display: flex;
+  align-items: center;
+}
+
+.carousel-slides {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-slide {
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+  position: relative;
+  /* Ensure proper image scaling and positioning */
+  background-size: cover !important;
+  background-position: center top !important; /* Always focus on the top portion */
+  background-repeat: no-repeat !important;
+  background-attachment: scroll;
+  /* Fallback for background image positioning */
+  object-fit: cover;
+  object-position: center top;
+  /* Ensure the image container doesn't crop the top */
+  overflow: visible;
+}
+
+.carousel-slide.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+.carousel-slide-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.carousel-caption {
+  padding: 1.5rem;
+  color: white;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.carousel-caption h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: white;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.carousel-caption p {
+  margin: 0;
+  font-size: 0.95rem;
+  opacity: 0.9;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+  .carousel-container {
+    height: 400px;
+    min-height: 400px;
+    aspect-ratio: 16/9;
+    /* Allow more space at the top */
+    padding-top: 20px;
+  }
+  
+  .carousel-slide {
+    background-position: center top !important;
+    /* Ensure the image is positioned correctly in the container */
+    top: -10%;
+    height: 110%;
+  }
+  
+  .carousel-caption h3 {
+    font-size: 1.3rem;
+  }
+  
+  .carousel-caption p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel-container {
+    height: 350px;
+    min-height: 350px;
+    aspect-ratio: 4/3;
+    padding-top: 15px;
+  }
+  
+  .carousel-slide {
+    background-position: center top !important;
+    top: -15%;
+    height: 115%;
+  }
+  
+  .carousel-caption h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.25rem;
+  }
+  
+  .carousel-caption p {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-container {
+    height: 300px;
+    min-height: 300px;
+    border-radius: 0;
+    margin: 0 -1rem;
+    width: calc(100% + 2rem);
+    padding-top: 10px;
+  }
+  
+  .carousel-slide {
+    background-position: center top !important;
+    top: -20%;
+    height: 120%;
+  }
+  
+  .carousel-caption {
+    padding: 1rem;
+  }
+  
+  .carousel-caption h3 {
+    font-size: 1.1rem;
+  }
+  
+  .carousel-caption p {
+    font-size: 0.8rem;
+  }
+}
+
+.carousel-caption p {
+  margin: 0;
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
+.carousel-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 0.75rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+  transition: all 0.3s ease;
+  width: 40px;
+  height: 40px;
+}
+
+.carousel-control:hover {
+  background: rgba(0, 0, 0, 0.7);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-control.prev {
+  left: 15px;
+}
+
+.carousel-control.next {
+  right: 15px;
+}
+
+.carousel-indicators {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  z-index: 3;
+}
+
+.indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.indicator.active {
+  background-color: #00B4D8;
+  transform: scale(1.2);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .carousel-caption {
+    padding: 1rem;
+  }
+  
+  .carousel-caption h3 {
+    font-size: 1.25rem;
+  }
+  
+  .carousel-caption p {
+    font-size: 0.85rem;
+  }
+  
+  .carousel-control {
+    width: 36px;
+    height: 36px;
+    padding: 0.5rem;
+  }
+  
+  .indicator {
+    width: 8px;
+    height: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-caption h3 {
+    font-size: 1.1rem;
+  }
+  
+  .carousel-caption p {
+    font-size: 0.8rem;
+  }
+  
+  .carousel-control {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .carousel-indicators {
+    bottom: 10px;
+  }
+}
