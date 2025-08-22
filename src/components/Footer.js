@@ -11,7 +11,6 @@ import {
   FaUserShield,
   FaLock,
   FaClipboardCheck,
-  FaPaperPlane
 } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import '../styles/Footer.css';
@@ -35,15 +34,6 @@ const Footer = () => {
     { name: 'Retail Security', path: '/services/retail-security' },
     { name: 'Event Security', path: '/services/event-security' },
     { name: 'CCTV Monitoring', path: '/services/cctv-monitoring' },
-  ];
-  
-  const companyLinks = [
-    { name: 'About Us', path: '/about' },
-    { name: 'Our Team', path: '/about#team' },
-    { name: 'Testimonials', path: '/testimonials' },
-    { name: 'Case Studies', path: '/case-studies' },
-    { name: 'Careers', path: '/careers' },
-    { name: 'Blog', path: '/blog' },
   ];
   
   const legalLinks = [

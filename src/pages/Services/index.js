@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { FaShieldAlt, FaUserShield, FaUsers, FaDoorOpen, FaShoppingBag, FaCalendarAlt, FaVideo, FaChevronRight, FaPhoneAlt } from 'react-icons/fa';
+import React, { useState} from 'react';
+import { FaShieldAlt, FaUserShield, FaUsers, FaDoorOpen, FaShoppingBag, FaCalendarAlt, FaVideo} from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import SecurityConsultant from './components/SecurityConsultant';

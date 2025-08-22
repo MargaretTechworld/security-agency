@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState} from 'react';
 import { 
   FaMapMarkerAlt, 
   FaPhoneAlt, 
@@ -6,7 +6,6 @@ import {
   FaPaperPlane, 
   FaCheck, 
   FaTimes, 
-  FaInfoCircle,
   FaClock,
   FaFacebookF,
   FaTwitter,
@@ -25,7 +24,7 @@ const Contact = () => {
   });
   
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitted] = useState(false);
   const [errors, setErrors] = useState({});
   const [notification, setNotification] = useState({ show: false, type: '', message: '' });
   

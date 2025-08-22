@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import '../styles/ImageCarousel.css';
 
@@ -6,21 +6,21 @@ const ImageCarousel = ({ images, autoPlay = true, interval = 5000 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
 
-  const goToNext = () => {
+  const goToNext = useCallback(() => {
     setCurrentIndex((prevIndex) => 
       prevIndex === images.length - 1 ? 0 : prevIndex + 1
     );
-  };
+  }, [images.length]);
 
-  const goToPrev = () => {
+  const goToPrev = useCallback(() => {
     setCurrentIndex((prevIndex) =>
       prevIndex === 0 ? images.length - 1 : prevIndex - 1
     );
-  };
+  }, [images.length]);
 
-  const goToSlide = (index) => {
+  const goToSlide = useCallback((index) => {
     setCurrentIndex(index);
-  };
+  }, []);
 
   useEffect(() => {
     if (!autoPlay || isPaused) return;
@@ -30,7 +30,7 @@ const ImageCarousel = ({ images, autoPlay = true, interval = 5000 }) => {
     }, interval);
 
     return () => clearTimeout(timer);
-  }, [currentIndex, isPaused]);
+  }, [currentIndex, isPaused, autoPlay, interval, goToNext]);
 
   return (
     <div 
