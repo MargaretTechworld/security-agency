@@ -445,6 +445,7 @@ section {
   font-size: 0.95rem;
   opacity: 0.9;
   color: rgba(255, 255, 255, 0.9);
+  text-align: center;
 }
 
 .about-section .carousel-control {

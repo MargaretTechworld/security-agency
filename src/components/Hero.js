@@ -4,16 +4,9 @@ import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import '../styles/Hero.css';
 
 // Import images at the top of the file
-import heroBg2 from '../assets/images/about_img1.jpg';
 import heroBg3 from '../assets/images/about_img3.jpg';
 
 const slides = [
-  {
-    subtitle: "Round-the-clock security services for your peace of mind",
-    background: heroBg2,
-    button1: "Learn More",
-    button2: "Contact Us"
-  },
   {
     subtitle: "State-of-the-art technology for maximum protection",
     background: heroBg3,
