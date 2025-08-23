@@ -72,33 +72,33 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     
-    const formErrors = validateForm();
-    if (Object.keys(formErrors).length > 0) {
+    if (!validateForm()) {
       return;
     }
     
     setIsSubmitting(true);
     
     try {
-      // Initialize EmailJS with your public key
-      emailjs.init('YOUR_PUBLIC_KEY'); // You'll need to get this from EmailJS
+      await emailjs.init('xlevy2Jk-SDdhTdng');
       
-      // Send email using EmailJS
+      const templateParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        to_email: 'margarettechworld@gmail.com',
+        phone: formData.phone || 'Not provided',
+        subject: formData.subject || 'No subject',
+        message: formData.message,
+        reply_to: formData.email
+      };
+      
       const result = await emailjs.send(
-        'YOUR_SERVICE_ID',     // EmailJS service ID
-        'YOUR_TEMPLATE_ID',    // EmailJS template ID
-        {
-          from_name: formData.name,
-          from_email: formData.email,
-          phone: formData.phone || 'Not provided',
-          subject: formData.subject || 'No subject',
-          message: formData.message,
-          to_email: 'margarettechworld@gmail.com' // Test email address
-        }
+        'default_service',
+        'template_gpawqdz',
+        templateParams,
+        'xlevy2Jk-SDdhTdng'
       );
       
-      if (result.status === 200) {
-        // Reset form on success
+      if (result.status === 200 || result.text === 'OK') {
         setFormData({
           name: '',
           email: '',
@@ -106,14 +106,10 @@ const Contact = () => {
           subject: '',
           message: ''
         });
-        
         showNotification('success', 'Your message has been sent successfully!');
-      } else {
-        throw new Error('Failed to send message');
       }
       
     } catch (error) {
-      console.error('Error submitting form:', error);
       showNotification('error', 'Failed to send message. Please try again later.');
     } finally {
       setIsSubmitting(false);
@@ -124,9 +120,9 @@ const Contact = () => {
     {
       icon: <FaMapMarkerAlt className="contact-icon" />,
       title: 'Our Location',
-      text: '2 Hall Street, Brookfields',
+      text: '56 Campbell Street ',
       subtext: 'Freetown, Sierra Leone',
-      link: 'https://maps.google.com?q=2+Hall+Street+Brookfields+Freetown',
+      link: 'https://maps.google.com?q=56+Campbell+Street+Freetown',
       linkText: 'View on Map'
     },
     {

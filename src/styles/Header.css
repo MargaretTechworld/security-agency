@@ -7,6 +7,20 @@
 .logo-img {
   width: 120px;
 }
+.contact-btn{
+  display: inline-block;
+  padding: 3px  9px;
+  background-color: goldenrod;
+  color: white;
+  border-radius: 50px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: var(--transition);
+  border: 2px solid transparent;
+  text-align: center;
+  cursor: pointer;
+}
 /* Base Header Styles */
 .header {
   position: fixed;
@@ -59,7 +73,16 @@
   text-decoration: none;
   transition: transform 0.2s var(--easing);
 }
-
+.ab-a-head{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ab-p{
+  margin-bottom: 0;
+  font-weight: 500;
+  font-size: 1rem;
+}
 .logo-link:hover {
   transform: translateY(-1px);
 }
@@ -157,19 +180,48 @@
 
 .cta-phone {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   color: var(--text-color);
   text-decoration: none;
   font-weight: 500;
-  padding: 8px 15px;
+  padding: 12px 15px;
   border-radius: 6px;
   transition: all 0.2s var(--easing);
   background-color: rgba(0, 0, 0, 0.02);
+  min-width: 180px;
 }
 
-.cta-phone:hover {
-  background-color: rgba(0, 0, 0, 0.05);
+.cta-phone p {
+  margin: 0 0 5px 0;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.flag-icon {
+  display: inline-block;
+  font-size: 1.2em;
+  margin-left: 5px;
+  animation: float 3s ease-in-out infinite;
+  transform: translateY(0);
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-5px) rotate(5deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+}
+
+.cta-phone span {
+  font-size: 0.95rem;
   color: var(--primary-color);
+  font-weight: 600;
 }
 
 .phone-icon {
@@ -177,7 +229,6 @@
   font-size: 0.9rem;
   color: var(--primary-color);
 }
-
 
 .header.menu-open .mobile-menu-backdrop {
   opacity: 1;

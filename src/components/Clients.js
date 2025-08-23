@@ -2,7 +2,9 @@
 import React from 'react';
 import '../styles/Clients.css';
 import logo1 from '../assets/images/clients/logo1.png';
-import logo2 from '../assets/images/clients/logo2.png';
+import logo2 from '../assets/images/clients/logo1.jpg';
+import logo3 from '../assets/images/clients/logo3.jpeg';
+import logo4 from '../assets/images/clients/logo 4.jpeg';
 import { FaShieldAlt } from 'react-icons/fa';
 
 const clients = [
@@ -26,7 +28,28 @@ const clients = [
     name: 'DDEF Mining Company', 
     logo: null, // No logo available, will use fallback
   },
+  { 
+    id: 5, 
+    name: 'Freetown Mall Wilkinson Road', 
+    logo: logo3, // No logo available, will use fallback
+  },
+  { 
+    id: 6, 
+    name: 'Connex  petrol stations', 
+    logo: logo4, // No logo available, will use fallback
+  },
+  { 
+    id: 7, 
+    name: 'Jamiru& Co', 
+    logo: null, // No logo available, will use fallback
+  },
+  { 
+    id: 8, 
+    name: 'Barristers & Solicitor', 
+    logo: null, // No logo available, will use fallback
+  }
 ];
+
 
 const Clients = () => {
   return (
@@ -80,7 +103,7 @@ const Clients = () => {
         
         <div className="client-stats">
           <div className="stat-item">
-            <div className="stat-number">50+</div>
+            <div className="stat-number">200+</div>
             <div className="stat-label">Enterprise Clients</div>
           </div>
           <div className="stat-item">

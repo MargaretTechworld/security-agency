@@ -74,10 +74,11 @@ const Footer = () => {
   const contactInfo = [
     { 
       icon: <FaMapMarkerAlt className="contact-icon" />, 
-      text: '2 Hall Street, Brookfields',
+      text: '56 Campbell Street ',
       subtext: 'Freetown, Sierra Leone',
-      link: 'https://maps.google.com?q=2+Hall+Street+Brookfields+Freetown'
+      link: 'https://maps.google.com?q=56+Campbell+Street+Freetown'
     },
+  
     { 
       title: 'Phone',
       items: [

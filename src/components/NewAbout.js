@@ -57,7 +57,7 @@ const NewAbout = ({ expanded = false }) => {
 
   const stats = [
     { value: '10+', label: 'Years Experience' },
-    { value: '500+', label: 'Satisfied Clients' },
+    { value: '200+', label: 'Satisfied Clients' },
     { value: '99.9%', label: 'Success Rate' },
     { value: '24/7', label: 'Support' }
   ];

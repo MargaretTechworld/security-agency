@@ -5,6 +5,20 @@ import { HiMenuAlt3, HiX } from 'react-icons/hi';
 import '../styles/Header.css';
 import logo from '../assets/images/logo.png';
 
+const FlagIcon = () => (
+  <svg
+    className="flag-icon"
+    viewBox="0 0 9 6"
+    width="20"
+    height="15"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path fill="#0072C6" d="M0 0h9v6H0z" />
+    <path fill="#FFF" d="M0 0h9v4H0z" />
+    <path fill="#1EB53A" d="M0 0h9v2H0z" />
+  </svg>
+);
+
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -20,7 +34,7 @@ const Header = () => {
   useEffect(() => {
     setIsMenuOpen(false);
     document.body.style.overflow = 'auto';
-    
+
     // Only scroll to top if we're not on the same page
     if (location.pathname !== window.location.pathname) {
       window.scrollTo({
@@ -29,7 +43,7 @@ const Header = () => {
       });
     }
   }, [location]);
-  
+
   // Handle navigation with scroll to top
   const handleNavClick = (e, to) => {
     // Prevent default only if we're on the same page to handle scroll
@@ -40,7 +54,7 @@ const Header = () => {
         behavior: 'smooth'
       });
     }
-    
+
     // Close mobile menu when a link is clicked
     if (isMenuOpen) {
       setIsMenuOpen(false);
@@ -64,7 +78,6 @@ const Header = () => {
     { to: "/services", text: "Services" },
     { to: "/about", text: "About Us" },
     { to: "/careers", text: "Careers" },
-    { to: "/contact", text: "Contact" },
   ];
 
   return (
@@ -76,12 +89,12 @@ const Header = () => {
               <img className="logo-img" src={logo} alt="logo" />
             </NavLink>
           </div>
-          
+
           <nav className="nav-menu">
             <ul className="nav-links">
               {navLinks.map((link, index) => (
                 <li key={index}>
-                  <NavLink 
+                  <NavLink
                     to={link.to}
                     className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}
                     onClick={(e) => handleNavClick(e, link.to)}
@@ -92,18 +105,22 @@ const Header = () => {
                 </li>
               ))}
             </ul>
-            
+
             <div className="header-cta">
+              <div className='ab-a-head'>
+                <p className='ab-p'>56 Campbell Street, Freetown </p>
+                <FlagIcon />
+              </div>
               <a href="tel:+23277702642" className="cta-phone">
                 <FaPhoneAlt className="phone-icon" />
                 <span>+232 77 702 642</span>
               </a>
-              <NavLink to="/contact" className="btn btn-primary">Contact us</NavLink>
+              <NavLink to="/contact" className="contact-btn">Contact us</NavLink>
             </div>
           </nav>
-          
-          <button 
-            className={`hamburger ${isMenuOpen ? 'active' : ''}`} 
+
+          <button
+            className={`hamburger ${isMenuOpen ? 'active' : ''}`}
             onClick={toggleMenu}
             aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
             aria-expanded={isMenuOpen}
@@ -112,7 +129,7 @@ const Header = () => {
           </button>
         </div>
       </div>
-      
+
       {/* Mobile Menu Backdrop */}
       {isMenuOpen && (
         <div className="mobile-menu-backdrop" onClick={toggleMenu}></div>

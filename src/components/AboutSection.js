@@ -61,7 +61,7 @@ const AboutSection = ({ expanded = false }) => {
     },
     { 
       id: 2, 
-      title: '500+ Clients',
+      title: '200+ Clients',
       description: 'Trusted by businesses and individuals nationwide',
       icon: <FaUsers className="achievement-icon" />
     },
