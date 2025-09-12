@@ -675,7 +675,7 @@ section {
   
   .mission-content {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 4rem;
     background: var(--white);
     padding: 3rem;
@@ -942,3 +942,25 @@ section {
     justify-content: center;
     padding: 0.875rem 2rem;
     border-radius: 50px;}
+
+    @media (max-width: 1024px) {
+  
+      .mission-content{
+        grid-template-columns: 1fr;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .mission-content{
+        grid-template-columns: 1fr;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .mission-content{
+        grid-template-columns: 1fr;
+      }
+    }
+    
+
+   

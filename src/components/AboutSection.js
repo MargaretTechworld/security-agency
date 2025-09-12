@@ -183,13 +183,14 @@ He can work in short notice  with good leadership qualities with the team he man
           </section>
 
           <section className="page-section mission-section">
-            <h2>Our Mission & Values</h2>
             <div className="mission-content">
+              <div>
+            <h3>Mission Statement</h3>
               <div className="mission-statement">
-                <h3>Mission Statement</h3>
                 <p>
                   To deliver <strong>unparalleled security solutions</strong> through innovation, integrity, and excellence, ensuring peace of mind for our clients and the communities we serve.
                 </p>
+              </div>
               </div>
               <div className="core-values">
                 <h3>Core Values</h3>
