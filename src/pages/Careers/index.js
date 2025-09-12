@@ -3,29 +3,29 @@ import { FaFileDownload, FaUserTie, FaShieldAlt, FaUsers, FaChartLine } from 're
 import '../../styles/Careers.css';
 
 const Careers = () => {
-  const openPositions = [
-    {
-      id: 1,
-      title: 'Security Officer',
-      type: 'Full-time',
-      location: 'New York, NY',
-      description: 'We are seeking experienced security officers to join our team.'
-    },
-    {
-      id: 2,
-      title: 'Cybersecurity Specialist',
-      type: 'Full-time',
-      location: 'Remote',
-      description: 'Join our cybersecurity team to protect our clients from digital threats.'
-    },
-    {
-      id: 3,
-      title: 'Security Consultant',
-      type: 'Contract',
-      location: 'Multiple Locations',
-      description: 'Work with clients to assess and improve their security measures.'
-    },
-  ];
+  // const openPositions = [
+  //   {
+  //     id: 1,
+  //     title: 'Security Officer',
+  //     type: 'Full-time',
+  //     location: 'New York, NY',
+  //     description: 'We are seeking experienced security officers to join our team.'
+  //   },
+  //   {
+  //     id: 2,
+  //     title: 'Cybersecurity Specialist',
+  //     type: 'Full-time',
+  //     location: 'Remote',
+  //     description: 'Join our cybersecurity team to protect our clients from digital threats.'
+  //   },
+  //   {
+  //     id: 3,
+  //     title: 'Security Consultant',
+  //     type: 'Contract',
+  //     location: 'Multiple Locations',
+  //     description: 'Work with clients to assess and improve their security measures.'
+  //   },
+  // ];
 
   const benefits = [
     {
