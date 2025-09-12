@@ -73,7 +73,7 @@ const Careers = () => {
             </div>
           </div>
 
-          <div className="open-positions">
+          {/* <div className="open-positions">
             <h2>Current Openings</h2>
             <div className="positions-list">
               {openPositions.map(position => (
@@ -96,7 +96,7 @@ const Careers = () => {
                 </div>
               ))}
             </div>
-          </div>
+          </div> */}
 
           <div className="application-process">
             <h2>How to Apply</h2>
