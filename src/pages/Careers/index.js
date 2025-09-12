@@ -118,7 +118,7 @@ const Careers = () => {
               </li>
               <li>
                 <h3>Submit Your Application</h3>
-                <p>Email your completed application and documents to: <a href="mailto:careers@elitesecurity.com">careers@elitesecurity.com</a></p>
+                <p>Email your completed application and documents to: <a href="mailto:eliteprotection25@gmail.com">eliteprotection25@gmail.com</a></p>
               </li>
             </ol>
           </div>
