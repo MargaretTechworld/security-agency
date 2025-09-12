@@ -9,6 +9,8 @@ import aboutImage2 from '../assets/images/about_img12.jpg';
 import aboutImage3 from '../assets/images/about_img13.jpg';
 import aboutImage4 from '../assets/images/about_img14.jpg';
 import aboutImage5 from '../assets/images/about_img16.jpg';
+import staff1 from '../assets/images/staff/1.jpg';
+import staff2 from '../assets/images/staff/2.jpg';
 
 const AboutSection = ({ expanded = false }) => {
   // Carousel images
@@ -16,63 +18,51 @@ const AboutSection = ({ expanded = false }) => {
     {
       src: aboutImage,
       alt: 'Professional security team',
-      caption: 'Your Safety is Our Priority',
-      description: 'Highly trained professionals ensuring your security'
     },
     {
       src: aboutImage1,
       alt: 'Security Operations Center',
-      caption: '24/7 Monitoring',
-      description: 'State-of-the-art surveillance and rapid response'
     },
     {
       src: aboutImage2,
       alt: 'Security Training',
-      caption: 'Expert Training',
-      description: 'Continuous professional development for our team'
     },
     {
       src: aboutImage3,
       alt: 'Client Consultation',
-      caption: 'Personalized Service',
-      description: 'Custom security solutions for your specific needs'
     },
     {
       src: aboutImage4,
       alt: 'Client Consultation',
-      caption: 'Personalized Service',
-      description: 'Custom security solutions for your specific needs'
     },
     {
       src: aboutImage5,
       alt: 'Client Consultation',
-      caption: 'Personalized Service',
-      description: 'Custom security solutions for your specific needs'
     }
   ];
 
   // Company achievements data
   const achievements = [
-    { 
-      id: 1, 
+    {
+      id: 1,
       title: '15+ Years Experience',
-      description: 'Providing top-notch security solutions since 2009',
+      description: 'Providing top-notch security solutions since 2010',
       icon: <FaClock className="achievement-icon" />
     },
-    { 
-      id: 2, 
+    {
+      id: 2,
       title: '200+ Clients',
       description: 'Trusted by businesses and individuals nationwide',
       icon: <FaUsers className="achievement-icon" />
     },
-    { 
-      id: 3, 
+    {
+      id: 3,
       title: 'Award Winning',
       description: 'Recognized for excellence in security services',
       icon: <FaAward className="achievement-icon" />
     },
-    { 
-      id: 4, 
+    {
+      id: 4,
       title: 'Certified Team',
       description: 'Fully licensed and vetted professionals',
       icon: <FaShieldAlt className="achievement-icon" />
@@ -85,15 +75,18 @@ const AboutSection = ({ expanded = false }) => {
       id: 1,
       name: 'Mr Osman Tejan Kamara',
       role: 'CEO / Managing Director',
-      bio: 'Leading our company with strategic vision and extensive industry experience in security management.',
-      image: ''
+      bio: `The CEO of Elite Security Specialist SL Limited 
+I have worked within the security industry for over 20 years in England, with various role, and responsibilities from supervising role to management level, award winning base on training, enthusiasm and leadership qualities`,
+      image: staff2
     },
     {
       id: 2,
       name: 'Mr Sailue Kargbo',
       role: 'Operations Manager',
-      bio: 'Oversees daily operations and ensures the highest standards of service delivery across all departments.',
-      image: ''
+      bio: `Mr Kargo has been in the security industry for 10 years now and has successfully managed operations in various security companies in Sierra Leone he’s 
+An outstanding operations manager and performance all around is excellent.
+He can work in short notice  with good leadership qualities with the team he managed and bring good results at the end of every task`,
+      image: staff1
     },
     {
       id: 3,
@@ -125,10 +118,10 @@ const AboutSection = ({ expanded = false }) => {
           <div className="about-grid">
             {/* Left Column - Image Carousel */}
             <div className="about-image-container">
-              <ImageCarousel 
-                images={carouselImages} 
-                autoPlay={true} 
-                interval={5000} 
+              <ImageCarousel
+                images={carouselImages}
+                autoPlay={true}
+                interval={5000}
                 showArrows={true}
                 showIndicators={true}
               />
@@ -141,7 +134,7 @@ const AboutSection = ({ expanded = false }) => {
               <div className="content-block">
                 <h3>Our Story</h3>
                 <p>
-                  Founded in 2009, Elite Security has grown from a small local security firm to a nationally recognized leader in comprehensive security services. Our journey has been marked by a steadfast commitment to excellence and a passion for protecting what matters most to our clients.
+                  Founded in 2010, Elite Security has grown from a small local security firm to a nationally recognized leader in comprehensive security services. Our journey has been marked by a steadfast commitment to excellence and a passion for protecting what matters most to our clients.
                 </p>
               </div>
 
@@ -182,7 +175,7 @@ const AboutSection = ({ expanded = false }) => {
           <section className="page-section">
             <h2>Our Story</h2>
             <p>
-              Founded in 2009, Elite Security began as a small team of security professionals with a shared vision: to provide exceptional security services that prioritize client safety and satisfaction. Over the years, we've grown into a nationally recognized firm, but we've never lost sight of our core values and commitment to excellence.
+              Founded in 2010, Elite Security began as a small team of security professionals with a shared vision: to provide exceptional security services that prioritize client safety and satisfaction. Over the years, we've grown into a nationally recognized firm, but we've never lost sight of our core values and commitment to excellence.
             </p>
             <p>
               Our journey has been marked by continuous growth, innovation, and a relentless focus on delivering the highest standard of security solutions. From our humble beginnings to becoming an industry leader, we've remained true to our founding principles while adapting to the evolving security landscape.

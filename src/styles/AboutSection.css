@@ -152,7 +152,6 @@ section {
 
 .section-header h2 {
   font-size: 2.5rem;
-  color: var(--text-dark);
   margin: 1rem 0 1.5rem;
   line-height: 1.2;
   font-weight: 800;
@@ -615,6 +614,7 @@ section {
     .about-section .carousel-control {
       width: 32px;
       height: 32px;
+    
     }
   }
   
@@ -675,7 +675,7 @@ section {
   
   .mission-content {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 4rem;
     background: var(--white);
     padding: 3rem;
@@ -760,7 +760,6 @@ section {
   }
   
   .member-image {
-    height: 280px;
     overflow: hidden;
     position: relative;
     background-color: #f0f0f0;

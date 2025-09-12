@@ -5,20 +5,6 @@ import { HiMenuAlt3, HiX } from 'react-icons/hi';
 import '../styles/Header.css';
 import logo from '../assets/images/logo.png';
 
-const FlagIcon = () => (
-  <svg
-    className="flag-icon"
-    viewBox="0 0 9 6"
-    width="20"
-    height="15"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <path fill="#0072C6" d="M0 0h9v6H0z" />
-    <path fill="#FFF" d="M0 0h9v4H0z" />
-    <path fill="#1EB53A" d="M0 0h9v2H0z" />
-  </svg>
-);
-
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -89,7 +75,15 @@ const Header = () => {
               <img className="logo-img" src={logo} alt="logo" />
             </NavLink>
           </div>
-
+          <div className="header-cta">
+              <div className='ab-a-head'>
+                <p className='ab-p'>eliteprotection25@gmail.com </p>
+              </div>
+              <a href="tel:+23277702642" className="cta-phone">
+                <FaPhoneAlt className="phone-icon" />
+                <span>+232 32 055466</span>
+              </a>
+            </div>
           <nav className="nav-menu">
             <ul className="nav-links">
               {navLinks.map((link, index) => (
@@ -105,18 +99,7 @@ const Header = () => {
                 </li>
               ))}
             </ul>
-
-            <div className="header-cta">
-              <div className='ab-a-head'>
-                <p className='ab-p'>56 Campbell Street, Freetown </p>
-                <FlagIcon />
-              </div>
-              <a href="tel:+23277702642" className="cta-phone">
-                <FaPhoneAlt className="phone-icon" />
-                <span>+232 77 702 642</span>
-              </a>
-              <NavLink to="/contact" className="contact-btn">Contact us</NavLink>
-            </div>
+            <NavLink to="/contact" className="contact-btn">Contact us</NavLink>
           </nav>
 
           <button

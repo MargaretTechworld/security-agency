@@ -14,26 +14,19 @@ const NewAbout = ({ expanded = false }) => {
     {
       src: 'https://picsum.photos/1600/900?random=1',
       alt: 'Security Team',
-      caption: 'Our Professional Team',
-      description: 'Highly trained security professionals ready to serve you'
+      
     },
     {
       src: 'https://picsum.photos/1600/900?random=2',
       alt: 'Security Operations Center',
-      caption: '24/7 Monitoring',
-      description: 'State-of-the-art surveillance and rapid response'
     },
     {
       src: 'https://picsum.photos/1600/900?random=3',
       alt: 'Security Technology',
-      caption: 'Advanced Technology',
-      description: 'Cutting-edge security systems and equipment'
     },
     {
       src: 'https://picsum.photos/1600/900?random=4',
       alt: 'Client Meeting',
-      caption: 'Personalized Service',
-      description: 'Custom security solutions tailored to your needs'
     }
   ];
 

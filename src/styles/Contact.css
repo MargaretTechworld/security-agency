@@ -72,6 +72,11 @@
   min-width: 300px;
   text-align: center;
 }
+.map{
+  margin-top: 2%;
+  width: 100%;
+  height: 50vh;
+}
 
 .notification.success {
   background-color: var(--success);
