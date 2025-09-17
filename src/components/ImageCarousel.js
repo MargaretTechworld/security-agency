@@ -33,7 +33,7 @@ const ImageCarousel = ({
     if (!autoPlay || isPaused || images.length <= 1) return;
     const timer = setInterval(goToNext, interval);
     return () => clearInterval(timer);
-  }, [currentIndex, isPaused, autoPlay, interval, goToNext]);
+  }, [currentIndex, isPaused, autoPlay, interval, goToNext, images.length]);
 
   if (!images || images.length === 0) return null;
 
