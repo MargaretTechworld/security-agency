@@ -55,12 +55,6 @@ const Surveillance = () => {
           <li>Peace of mind knowing your property is protected</li>
         </ul>
       </div>
-      
-      <div className="cta-section">
-        <h3>Ready to Secure Your Property?</h3>
-        <p>Contact us today for a free consultation and security assessment.</p>
-        <Link to="/contact" className="btn btn-primary">Get a Free Quote</Link>
-      </div>
     </div>
   );
 };

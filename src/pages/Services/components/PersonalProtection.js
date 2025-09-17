@@ -77,12 +77,6 @@ const PersonalProtection = () => {
           </div>
         </div>
       </div>
-      
-      <div className="cta-section">
-        <h3>Your Safety is Our Priority</h3>
-        <p>Contact us for a confidential consultation about your personal protection needs.</p>
-        <Link to="/contact" className="btn btn-primary">Request Protection</Link>
-      </div>
     </div>
   );
 };

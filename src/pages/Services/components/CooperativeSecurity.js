@@ -16,10 +16,6 @@ const CooperativeSecurity = () => {
           <li>Collaborative security planning</li>
         </ul>
       </div>
-      
-      <div className="cta-section">
-        <p>Enhance your community's security with our cooperative solutions.</p>
-      </div>
     </div>
   );
 };

@@ -16,10 +16,6 @@ const SecurityConsultant = () => {
           <li>Regulatory compliance consulting</li>
         </ul>
       </div>
-      
-      <div className="cta-section">
-        <p>Contact us today to schedule a consultation with one of our security experts.</p>
-      </div>
     </div>
   );
 };

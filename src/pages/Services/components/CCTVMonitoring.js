@@ -16,10 +16,6 @@ const CCTVMonitoring = () => {
           <li>Video verification and evidence collection</li>
         </ul>
       </div>
-      
-      <div className="cta-section">
-        <p>Enhance your security with our professional CCTV monitoring services.</p>
-      </div>
     </div>
   );
 };

@@ -16,10 +16,6 @@ const StaticSecurity = () => {
           <li>Regular security patrols</li>
         </ul>
       </div>
-      
-      <div className="cta-section">
-        <p>Secure your premises with our professional static security services.</p>
-      </div>
     </div>
   );
 };

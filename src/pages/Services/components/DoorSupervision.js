@@ -1,5 +1,5 @@
 import React from 'react';
-
+import image1 from "../../../assets/images/services/door.jpg";
 const DoorSupervision = () => {
   return (
     <div className="service-detail">
@@ -16,10 +16,12 @@ const DoorSupervision = () => {
           <li>Emergency response coordination</li>
         </ul>
       </div>
-      
-      <div className="cta-section">
-        <p>Ensure a safe environment at your venue with our professional door supervision services.</p>
-      </div>
+      <div className="event-img-content">
+              <div className="service-img-image">
+                <img className="service-img-image" src={image1} alt="Residential security system in place" />
+              </div>
+            </div>
+  
     </div>
   );
 };

@@ -24,7 +24,7 @@ const Services = () => {
     { id: 'security-consultant', title: 'Security Consultant', icon: <FaUserShield className="service-icon" />, component: <SecurityConsultant /> },
     { id: 'cooperative-security', title: 'Cooperative Security', icon: <FaUsers className="service-icon" />, component: <CooperativeSecurity /> },
     { id: 'static-security', title: 'Static Security', icon: <FaShieldAlt className="service-icon" />, component: <StaticSecurity /> },
-    { id: 'door-supervision', title: 'Door Supervision/Bouncer', icon: <FaDoorOpen className="service-icon" />, component: <DoorSupervision /> },
+    { id: 'door-supervision', title: 'Door Supervision', icon: <FaDoorOpen className="service-icon" />, component: <DoorSupervision /> },
     { id: 'retail-security', title: 'Retail Security', icon: <FaShoppingBag className="service-icon" />, component: <RetailSecurity /> },
     { id: 'event-security', title: 'Event Security', icon: <FaCalendarAlt className="service-icon" />, component: <EventSecurity /> },
     { id: 'cctv-monitoring', title: 'CCTV Monitoring', icon: <FaVideo className="service-icon" />, component: <CCTVMonitoring /> },

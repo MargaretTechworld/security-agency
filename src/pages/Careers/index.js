@@ -1,6 +1,7 @@
 import React from 'react';
 import { FaFileDownload, FaUserTie, FaShieldAlt, FaUsers, FaChartLine } from 'react-icons/fa';
 import '../../styles/Careers.css';
+import applicationForm from "../../assets/ApplicationForm.pdf";
 
 const Careers = () => {
   // const openPositions = [
@@ -105,12 +106,12 @@ const Careers = () => {
                 <h3>Download the Application</h3>
                 <p>Fill out our standard application form</p>
                 <a 
-                  href="/documents/application-form.pdf" 
-                  className="download-link"
-                  download="SecureShield-Application-Form.pdf"
-                >
-                  <FaFileDownload /> Download Application Form
-                </a>
+  href={applicationForm}
+  className="download-link"
+  download="SecureShield-Application-Form.pdf"
+>
+  <FaFileDownload /> Download Application Form
+</a>
               </li>
               <li>
                 <h3>Prepare Your Documents</h3>

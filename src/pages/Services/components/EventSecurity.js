@@ -1,5 +1,5 @@
 import React from 'react';
-
+import image1 from "../../../assets/images/services/event.jpg";
 const EventSecurity = () => {
   return (
     <div className="service-detail">
@@ -16,10 +16,11 @@ const EventSecurity = () => {
           <li>Medical and first aid coordination</li>
         </ul>
       </div>
-      
-      <div className="cta-section">
-        <p>Ensure your event's success with our professional security services.</p>
-      </div>
+      <div className="event-img-content">
+              <div className="service-img-image">
+                <img className="service-img-image" src={image1} alt="Residential security system in place" />
+              </div>
+            </div>
     </div>
   );
 };

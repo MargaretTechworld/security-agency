@@ -93,7 +93,7 @@ const Footer = () => {
           link: 'tel:+23231698619'
         },
         { 
-          text: '+232 32 054 66',
+          text: '+232 32 055 466',
           label: 'Office',
           link: 'tel:+2323205466'
         },

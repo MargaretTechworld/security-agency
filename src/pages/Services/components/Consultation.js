@@ -91,12 +91,6 @@ const Consultation = () => {
           </div>
         </div>
       </div>
-      
-      <div className="cta-section">
-        <h3>Secure Your Future Today</h3>
-        <p>Schedule a consultation with our security experts to assess your needs and develop a comprehensive security strategy.</p>
-        <Link to="/contact" className="btn btn-primary">Request Consultation</Link>
-      </div>
     </div>
   );
 };

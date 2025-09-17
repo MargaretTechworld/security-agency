@@ -72,11 +72,6 @@ const Cybersecurity = () => {
         </div>
       </div>
       
-      <div className="cta-section">
-        <h3>Secure Your Digital Assets Today</h3>
-        <p>Get a free cybersecurity assessment and protect your business from evolving threats.</p>
-        <Link to="/contact" className="btn btn-primary">Request Assessment</Link>
-      </div>
     </div>
   );
 };
