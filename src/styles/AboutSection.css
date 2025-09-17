@@ -71,12 +71,35 @@ section {
   border-radius: var(--border-radius);
   overflow: hidden;
   box-shadow: var(--box-shadow);
-  height: 500px; /* Fixed height */
+  height: 550px; /* Slightly taller to accommodate heads */
   width: 100%;
   transition: var(--transition);
-  /* Ensure proper carousel container */
+  background-color: #f5f5f5;
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Ensure carousel fills its container */
+.about-image-container .carousel-container {
+  height: 100%;
+  width: 100%;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+}
+
+/* Adjust image container */
+.about-image-container .carousel-slides {
+  height: 100%;
+  width: 100%;
+}
+
+/* Ensure images are properly contained */
+.about-image-container .carousel-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 0%; /* Show the very top of the images */
 }
 
 .about-image-container:hover {
@@ -84,16 +107,9 @@ section {
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
 }
 
+/* This is now handled by the ImageCarousel component */
 .about-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  display: block;
-  transition: transform 0.8s ease;
-  position: absolute;
-  top: 0;
-  left: 0;
+  display: none; /* Hide the direct image since we're using the carousel */
 }
 
 .about-image-container:hover .about-image {
