@@ -98,27 +98,25 @@ const ImageCarousel = ({
           overflow: 'hidden'
         }}
       >
-        {images.map((image, index) => {
-          const imgSrc = getImageSource(image);
-          return (
-            <div 
-              key={index}
-              className={`carousel-slide ${currentIndex === index ? 'active' : ''}`}
-              style={{
-                position: 'absolute',
-                top: 0,
-                left: 0,
-                width: '100%',
-                height: '100%',
-                opacity: currentIndex === index ? 1 : 0,
-                transition: 'opacity 0.5s ease-in-out',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                zIndex: currentIndex === index ? 1 : 0
-              }}
-              aria-hidden={currentIndex !== index}
-            >
+        {images.map((image, index) => (
+          <div 
+            key={index}
+            className={`carousel-slide ${currentIndex === index ? 'active' : ''}`}
+            style={{
+              position: 'absolute',
+              top: 0,
+              left: 0,
+              width: '100%',
+              height: '100%',
+              opacity: currentIndex === index ? 1 : 0,
+              transition: 'opacity 0.5s ease-in-out',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              zIndex: currentIndex === index ? 1 : 0
+            }}
+            aria-hidden={currentIndex !== index}
+          >
               <div className="image-wrapper" style={{
                 position: 'relative',
                 width: '100%',
@@ -165,8 +163,8 @@ const ImageCarousel = ({
                 </div>
               )}
             </div>
-          );
-        })}
+          ))
+        }
       </div>
 
       {showControls && images.length > 1 && (
