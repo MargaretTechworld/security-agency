@@ -37,12 +37,49 @@ const ImageCarousel = ({
 
   if (!images || images.length === 0) return null;
 
-  // Get the correct image source (support both src and image properties)
-  const getImageSource = (img) => {
-    if (typeof img === 'string') return img;
-    if (img.src) return img.src;
-    if (img.image) return img.image;
-    return '';
+  // Get the correct image source with quality optimization
+  const getImageSource = (img, highQuality = false) => {
+    let src = '';
+    if (typeof img === 'string') {
+      src = img;
+    } else if (img.src) {
+      src = img.src;
+    } else if (img.image) {
+      src = img.image;
+    }
+
+    // In production, we need to handle CDN/optimization parameters
+    if (process.env.NODE_ENV === 'production') {
+      // If high quality version is requested
+      if (highQuality) {
+        // Try to get high-res version if specified
+        if (img.highRes) return img.highRes;
+        
+        // If no high-res version, try to modify the URL to get better quality
+        if (src.includes('?')) {
+          // If there are query parameters, add/update quality
+          if (!src.includes('q=')) {
+            return `${src}&q=90&auto=format`;
+          }
+        } else {
+          // Add quality parameter
+          return `${src}?q=90&auto=format`;
+        }
+      }
+      
+      // For regular quality, ensure we're not getting a low-quality version
+      if (src.includes('?')) {
+        if (src.includes('q=')) {
+          // Replace existing quality parameter if it's too low
+          return src.replace(/q=\d+/, 'q=80');
+        }
+        return `${src}&q=80&auto=format`;
+      }
+      return `${src}?q=80&auto=format`;
+    }
+    
+    // In development, just return the source as is
+    return src;
   };
 
   return (
@@ -82,17 +119,45 @@ const ImageCarousel = ({
               }}
               aria-hidden={currentIndex !== index}
             >
-              <img 
-                src={imgSrc} 
-                alt={image.alt || ''}
-                style={{
-                  width: '100%',
-                  height: '100%',
-                  objectFit: 'cover',
-                  objectPosition: 'center 0%', /* Show the very top of the images */
-                  display: 'block'
-                }}
-              />
+              <div className="image-wrapper" style={{
+                position: 'relative',
+                width: '100%',
+                height: '100%',
+                overflow: 'hidden'
+              }}>
+                <img 
+                  src={getImageSource(image)}
+                  srcSet={`${getImageSource(image, true)} 2x`}
+                  alt={image.alt || ''}
+                  style={{
+                    position: 'absolute',
+                    top: 0,
+                    left: 0,
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'cover',
+                    objectPosition: 'center 0%',
+                    display: 'block',
+                    backgroundColor: '#f5f5f5',
+                    transition: 'opacity 0.3s ease-in-out',
+                    opacity: 0,
+                    transform: 'translateZ(0)',
+                    backfaceVisibility: 'hidden',
+                    willChange: 'transform'
+                  }}
+                  loading="eager"
+                  decoding="async"
+                  fetchPriority={index === currentIndex ? 'high' : 'auto'}
+                  onLoad={(e) => {
+                    e.target.style.opacity = 1;
+                    // Preload next image
+                    if (images[currentIndex + 1]) {
+                      const nextImg = new Image();
+                      nextImg.src = getImageSource(images[currentIndex + 1]);
+                    }
+                  }}
+                />
+              </div>
               {image.caption && (
                 <div className="carousel-caption">
                   <h3>{image.caption}</h3>

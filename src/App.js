@@ -5,7 +5,6 @@ import { ThemeProvider, useTheme } from './context/ThemeContext';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
-import LoadingSpinner from './components/LoadingSpinner';
 import './App.css';
 import './components/PageHeader.css';
 
@@ -19,10 +18,29 @@ const PageHeader = lazy(() => import('./components/PageHeader'));
 const Services = lazy(() => import('./pages/Services'));
 const Careers = lazy(() => import('./pages/Careers'));
 
-// Loading component for Suspense fallback
+// Simple loading fallback
 const LoadingFallback = () => (
-  <div className="loading-container">
-    <LoadingSpinner />
+  <div className="loading-fallback" style={{
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    minHeight: '100vh',
+    backgroundColor: 'var(--background-color)'
+  }}>
+    <div style={{
+      width: '40px',
+      height: '40px',
+      border: '4px solid var(--primary-color)',
+      borderTop: '4px solid transparent',
+      borderRadius: '50%',
+      animation: 'spin 1s linear infinite'
+    }} />
+    <style jsx>{`
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+    `}</style>
   </div>
 );
 
