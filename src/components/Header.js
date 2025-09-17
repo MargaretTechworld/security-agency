@@ -3,7 +3,7 @@ import { NavLink, useLocation } from 'react-router-dom';
 import { FaPhoneAlt } from 'react-icons/fa';
 import { HiMenuAlt3, HiX } from 'react-icons/hi';
 import '../styles/Header.css';
-import logo from '../assets/images/logo.png';
+const logo = '/assets/images/logo.png';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

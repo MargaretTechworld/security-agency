@@ -641,7 +641,7 @@ section {
   
   .about-hero {
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
-                url('../assets/images/hero-bg.jpg') center/cover;
+                url('../../public/assets/images/hero-bg.jpg') center/cover;
     color: var(--white);
     padding: 8rem 0 6rem;
     text-align: center;

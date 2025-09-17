@@ -3,11 +3,11 @@ import { Link } from 'react-router-dom';
 import { FaPhone, FaEnvelope } from 'react-icons/fa';
 import '../styles/Hero.css';
 
-// Import images with webp format if available
-import heroBg1 from '../assets/images/hero bg/1.jpg';
-import heroBg3 from '../assets/images/hero bg/3.jpg';
-import heroBg4 from '../assets/images/hero bg/4.jpg';
-import heroBg5 from '../assets/images/hero bg/5.jpg';
+// Import images from public folder
+const heroBg1 = '/assets/images/hero%20bg/1.jpg';
+const heroBg3 = '/assets/images/hero%20bg/3.jpg';
+const heroBg4 = '/assets/images/hero%20bg/4.jpg';
+const heroBg5 = '/assets/images/hero%20bg/5.jpg';
 
 const slides = [
   { background: heroBg1, alt: 'Security Team' },
@@ -25,9 +25,10 @@ const quotes = [
 
 // Preload images
 const preloadImages = (images) => {
-  images.forEach(src => {
+  images.forEach((slide) => {
     const img = new Image();
-    img.src = src.background;
+    // Use the full path from the public folder
+    img.src = process.env.PUBLIC_URL + slide.background;
   });
 };
 
@@ -40,7 +41,12 @@ const Hero = () => {
   // Preload images on component mount
   useEffect(() => {
     preloadImages(slides);
+    // Force a reflow to ensure proper image loading
+    const timer = setTimeout(() => {
+      window.dispatchEvent(new Event('resize'));
+    }, 100);
     setIsLoaded(true);
+    return () => clearTimeout(timer);
   }, []);
 
   const nextSlide = useCallback(() => {
@@ -83,14 +89,19 @@ const Hero = () => {
             key={index}
             className={`hero-slide ${index === currentSlide ? 'active' : ''}`}
             style={{
-              backgroundImage: `url(${slide.background})`,
               opacity: index === currentSlide ? 1 : 0,
-              transition: 'opacity 0.5s ease-in-out'
+              transition: 'opacity 0.5s ease-in-out',
             }}
             aria-hidden={index !== currentSlide}
-            role="img"
-            aria-label={slide.alt}
-          />
+          >
+            <img 
+              src={process.env.PUBLIC_URL + slide.background}
+              alt={slide.alt}
+              className="hero-image"
+              loading="eager"
+              decoding="async"
+            />
+          </div>
         ))}
         <div className="overlay" />
       </div>

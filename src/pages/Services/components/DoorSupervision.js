@@ -1,5 +1,5 @@
 import React from 'react';
-import image1 from "../../../assets/images/services/door.jpg";
+const image1 = "/assets/images/services/door.jpg";
 const DoorSupervision = () => {
   return (
     <div className="service-detail">

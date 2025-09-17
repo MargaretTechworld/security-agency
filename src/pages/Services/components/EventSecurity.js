@@ -1,5 +1,5 @@
 import React from 'react';
-import image1 from "../../../assets/images/services/event.jpg";
+const image1 = "/assets/images/services/event.jpg";
 const EventSecurity = () => {
   return (
     <div className="service-detail">

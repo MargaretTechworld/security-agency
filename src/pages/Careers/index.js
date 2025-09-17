@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaFileDownload, FaUserTie, FaShieldAlt, FaUsers, FaChartLine } from 'react-icons/fa';
 import '../../styles/Careers.css';
-import applicationForm from "../../assets/ApplicationForm.pdf";
+const applicationForm = "/assets/ApplicationForm.pdf";
 
 const Careers = () => {
   // const openPositions = [

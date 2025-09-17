@@ -1,11 +1,12 @@
 // src/components/Clients.js
 import React from 'react';
-import '../styles/Clients.css';
-import logo1 from '../assets/images/clients/logo1.png';
-import logo2 from '../assets/images/clients/logo1.jpg';
-import logo3 from '../assets/images/clients/logo3.jpeg';
-import logo4 from '../assets/images/clients/logo 4.jpeg';
 import { FaShieldAlt } from 'react-icons/fa';
+import '../styles/Clients.css';
+
+const logo1 = '/assets/images/clients/logo1.png';
+const logo2 = '/assets/images/clients/logo1.jpg';
+const logo3 = '/assets/images/clients/logo3.jpeg';
+const logo4 = '/assets/images/clients/logo 4.jpeg';
 
 const clients = [
   { id: 1, name: 'PPASL', logo: logo1 },

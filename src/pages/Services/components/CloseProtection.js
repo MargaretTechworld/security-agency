@@ -1,5 +1,5 @@
 import React from 'react';
-import image1 from "../../../assets/images/hero bg/1.jpg";
+const image1 = "/assets/images/hero bg/1.jpg";
 
 const CloseProtection = () => {
   return (

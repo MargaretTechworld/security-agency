@@ -3,14 +3,14 @@ import { Link } from 'react-router-dom';
 import { FaShieldAlt, FaAward, FaUsers, FaClock, FaChevronRight, FaUser } from 'react-icons/fa';
 import ImageCarousel from './ImageCarousel';
 import '../styles/AboutSection.css';
-import aboutImage from '../assets/images/about_img1.jpg';
-import aboutImage1 from '../assets/images/about_img11.jpg';
-import aboutImage2 from '../assets/images/about_img12.jpg';
-import aboutImage3 from '../assets/images/about_img13.jpg';
-import aboutImage4 from '../assets/images/about_img14.jpg';
-import aboutImage5 from '../assets/images/about_img16.jpg';
-import staff1 from '../assets/images/staff/1.jpg';
-import staff2 from '../assets/images/staff/2.jpg';
+const aboutImage = '/assets/images/about_img1.jpg';
+const aboutImage1 = '/assets/images/about_img11.jpg';
+const aboutImage2 = '/assets/images/about_img12.jpg';
+const aboutImage3 = '/assets/images/about_img13.jpg';
+const aboutImage4 = '/assets/images/about_img14.jpg';
+const aboutImage5 = '/assets/images/about_img16.jpg';
+const staff1 = '/assets/images/staff/1.jpg';
+const staff2 = '/assets/images/staff/2.jpg';
 
 const AboutSection = ({ expanded = false }) => {
   // Carousel images
