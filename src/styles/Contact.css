@@ -354,7 +354,7 @@ textarea.form-control {
   width: 100%;
   min-height: auto; /* Changed from fixed height */
   position: relative;
-  background-image: url('../../public/assets/images/pattern-dark.jpg');
+  background: black;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
