@@ -11,6 +11,9 @@ const aboutImage4 = '/assets/images/about_img14.jpg';
 const aboutImage5 = '/assets/images/about_img16.jpg';
 const staff1 = '/assets/images/staff/1.jpg';
 const staff2 = '/assets/images/staff/2.jpg';
+const staff3 = '/assets/images/staff/3.jpg'
+const staff4 = '/assets/images/staff/4.jpg'
+
 
 const AboutSection = ({ expanded = false }) => {
   // Carousel images
@@ -92,15 +95,15 @@ He can work in short notice  with good leadership qualities with the team he man
       id: 3,
       name: 'Ms Mariama Kanneh',
       role: 'Secretary',
-      bio: 'Manages administrative operations and ensures seamless communication within the organization.',
-      image: ''
+      bio: 'Dedicated and detail-oriented professional with experience in administration, data entry, and secretarial support. Skilled in office management, computer opertions, and maintaining confidentiality in high-level environments.',
+      image: staff3
     },
     {
       id: 4,
       name: 'Mr Theodore Browning',
       role: 'Logistics Manager',
       bio: 'Coordinates all logistical operations to ensure efficient deployment of security personnel and resources.',
-      image: ''
+      image: staff4
     }
   ];
 

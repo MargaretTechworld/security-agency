@@ -116,7 +116,11 @@ const Hero = () => {
 
           <div className="contact-details">
             <a href="tel:+1234567890" className="contact-item">
-              <FaPhone /> (232) 32 055466
+              <FaPhone /> 
+              (UK Ofice) +44 786 055 5808 <br />
+              (232) 32 055466 <br />
+              (232) 77 702 642 <br />
+              (232) 31 698 619 <br />
             </a>
             <a href="mailto:eliteprotection25@gmail.com" className="contact-item">
               <FaEnvelope /> eliteprotection25@gmail.com

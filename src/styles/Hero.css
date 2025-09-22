@@ -89,9 +89,6 @@
 }
 
 /* Quote */
-.quote-container {
-  min-height: 100px;
-}
 
 .quote-text {
   font-style: italic;
