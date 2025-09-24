@@ -79,12 +79,12 @@ const Contact = () => {
     setIsSubmitting(true);
     
     try {
-      await emailjs.init('xlevy2Jk-SDdhTdng');
+      await emailjs.init('mUr3BTywihNTtvzLx');
       
       const templateParams = {
         from_name: formData.name,
         from_email: formData.email,
-        to_email: 'margarettechworld@gmail.com',
+        to_email: 'eliteprotection25@gmail.com',
         phone: formData.phone || 'Not provided',
         subject: formData.subject || 'No subject',
         message: formData.message,
@@ -93,9 +93,9 @@ const Contact = () => {
       
       const result = await emailjs.send(
         'default_service',
-        'template_gpawqdz',
+        'template_w3c7n8u',
         templateParams,
-        'xlevy2Jk-SDdhTdng'
+        'mUr3BTywihNTtvzLx'
       );
       
       if (result.status === 200 || result.text === 'OK') {
