@@ -1,5 +1,5 @@
 import React from 'react';
-const image1 = "/assets/images/services/retail.jpg";
+// const image1 = "/assets/images/services/retail.jpg";
 const RetailSecurity = () => {
   return (
     <div className="service-detail">
@@ -16,11 +16,11 @@ const RetailSecurity = () => {
           <li>Emergency response coordination</li>
         </ul>
       </div>
-      <div className="event-img-content">
+      {/* <div className="event-img-content">
               <div className="service-img-image">
                 <img className="service-img-image" src={image1} alt="Residential security system in place" />
               </div>
-            </div>
+            </div> */}
     </div>
   );
 };
