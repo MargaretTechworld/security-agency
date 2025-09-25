@@ -233,21 +233,6 @@
   color: var(--footer-accent);
 }
 
-.footer-logo::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 50px;
-  height: 3px;
-  background-color: var(--footer-accent);
-  transition: var(--transition);
-}
-
-.footer-logo:hover::after {
-  width: 100%;
-}
-
 .footer-about {
   margin-bottom: 1.5rem;
   font-size: 0.95rem;
@@ -380,16 +365,6 @@
   font-weight: 700;
   position: relative;
   padding-bottom: 0.8rem;
-}
-
-.footer-title::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 40px;
-  height: 2px;
-  background: var(--footer-accent);
 }
 
 /* Footer Links */

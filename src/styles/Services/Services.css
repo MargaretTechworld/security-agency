@@ -129,15 +129,55 @@
 }
 
 /* ===== Image Styling (Improved) ===== */
-.event-img-content {
-  margin-top: 2rem;
-  display: flex;
-  justify-content: center;
+.side-div {
+  width: 100%;
+  position: relative;
+  margin: 1rem 0;
+  min-height: 300px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background-color: #f8f9fa; /* Light background in case images don't load */
+}
+
+.sliding-images {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: inherit;
+}
+
+.sliding-images img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+  border-radius: 8px;
+}
+
+.sliding-images img.active {
+  opacity: 1;
+}
+
+/* Desktop styles */
+@media (min-width: 768px) {
+  .side-div {
+    min-height: 400px;
+    max-height: 600px;
+  }
 }
 
 .service-img-image {
-  max-width: 700px; /* keeps image contained */
-  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
 }
 
 .service-img {
@@ -200,28 +240,74 @@
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
 }
-.services-img-cont{
+.services-img-cont {
   display: flex;
-}
-.side-div {
+  flex-direction: column;
+  gap: 2rem;
   width: 100%;
-  min-height: 50vh;
-  border-radius: 12px;
 }
 
-.sliding-images {
-  position: relative;
+/* Default to column layout for all screens */
+.services-img-cont {
+  flex-direction: column;
+}
+
+/* Adjust column layout for better image display */
+.services-img-cont {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 1rem;
   width: 100%;
-  height: 100%;
+}
+
+.side-div {
+  width: 100%;
+  max-width: 100%;
+  margin: 2rem 0;
+  padding: 0 0.5rem;
+}
+
+/* Switch to row layout for screens 1230px and above */
+@media (min-width: 1230px) {
+  .services-img-cont {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+  
+  .service-detail {
+    flex: 1;
+    padding-right: 2rem;
+  }
+  
+  .side-div {
+    flex: 1;
+    min-width: 45%;
+    max-width: 55%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+  }
+}
+
+/* Adjust side-div for medium screens (768px - 1229px) */
+@media (min-width: 768px) and (max-width: 1229px) {
+  .side-div {
+    max-width: 95%;
+    margin: 3rem auto;
+    min-height: 450px;
+    padding: 0;
+  }
+  
+  .sliding-images {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+  }
 }
 
 .side-img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
+  /* These styles are now handled by .sliding-images img */
   opacity: 0;
   transition: opacity 1s ease-in-out;
 }
