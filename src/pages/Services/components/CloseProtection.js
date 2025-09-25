@@ -1,35 +1,53 @@
-import React from 'react';
-const image1 = "/assets/images/hero bg/1.jpg";
+import React, { useState, useEffect } from 'react';
+
+const images = [
+  "/assets/images/hero bg/1.jpg",
+  "/assets/images/hero bg/3.jpg",
+];
 
 const CloseProtection = () => {
-  return (
-    <div className="service-detail">
-      <h2>Close Protection Services</h2>
-      <p>
-        Our highly trained close protection officers provide discreet and professional 
-        personal security for individuals, executives, VIPs, and high-profile clients. 
-        We ensure safety and peace of mind through proactive risk assessment and 
-        tailored protection strategies.
-      </p>
-      
-      <div className="service-features">
-        <h3>Our Close Protection Services Include:</h3>
-        <ul>
-          <li>Personal bodyguards and executive protection</li>
-          <li>Secure travel planning and escort services</li>
-          <li>Threat and risk assessment</li>
-          <li>Residential and workplace protection</li>
-          <li>24/7 security coverage tailored to client needs</li>
-        </ul>
-      </div>
+  const [currentIndex, setCurrentIndex] = useState(0);
 
-      <div className="event-img-content">
-        <div className="service-img-image">
-          <img 
-            className="service-img" 
-            src={image1} 
-            alt="Close protection officer providing VIP security" 
-          />
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <div className="services-img-cont">
+      <div className="service-detail">
+        <h2>Close Protection Services</h2>
+        <p>
+          Our highly trained close protection officers provide discreet and professional 
+          personal security for individuals, executives, VIPs, and high-profile clients. 
+          We ensure safety and peace of mind through proactive risk assessment and 
+          tailored protection strategies.
+        </p>
+        
+        <div className="service-features">
+          <h3>Our Close Protection Services Include:</h3>
+          <ul>
+            <li>Personal bodyguards and executive protection</li>
+            <li>Secure travel planning and escort services</li>
+            <li>Threat and risk assessment</li>
+            <li>Residential and workplace protection</li>
+            <li>24/7 security coverage tailored to client needs</li>
+          </ul>
+        </div>
+      </div>
+      <div className="side-div">
+        <div className="sliding-images">
+          {images.map((image, index) => (
+            <img
+              key={index}
+              className={`side-img ${index === currentIndex ? 'active' : ''}`}
+              src={image}
+              alt="Close protection officer in action"
+            />
+          ))}
         </div>
       </div>
     </div>
